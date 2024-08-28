@@ -7,7 +7,6 @@ import './index.css';
 function App() {
   return (
     <div className="App">
-      <h1>Juego de Stop</h1>
       <Game />
     </div>
   );
