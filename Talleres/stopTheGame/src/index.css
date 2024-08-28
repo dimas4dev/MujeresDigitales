@@ -1,0 +1,27 @@
+/* styles.css */
+.game-container {
+  padding: 20px;
+}
+
+.column-container {
+  display: flex;
+}
+
+.columna {
+  flex: 1;
+  text-align: center;
+}
+
+.rows-container {
+  margin-top: 20px;
+}
+
+.fila {
+  display: flex;
+}
+
+.input-field {
+  flex: 1;
+  padding: 5px;
+  margin-right: 5px;
+}
