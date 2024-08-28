@@ -1,39 +1,42 @@
+/* Aplicamos estilo general a la página para que ocupe toda la pantalla */
+html,
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  height: 100%;
   margin: 0;
-  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  background-color: #f4f4f4;
 }
 
+/* Aseguramos que el contenedor del juego ocupe la mayor parte del espacio disponible */
 .game-container {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  max-width: 90%;
-  width: 100%;
-  max-height: 90%;
-  height: auto;
-  overflow-y: auto;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
+/* Estilo del título */
 h1 {
   text-align: center;
   color: #444;
   margin-bottom: 20px;
 }
 
+/* Las columnas están ahora alineadas horizontalmente y distribuidas equitativamente */
 .column-container {
   display: flex;
+  justify-content: space-between;
   background-color: #007BFF;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .columna {
@@ -42,17 +45,23 @@ h1 {
   color: white;
   font-weight: bold;
   font-size: 1.2em;
+  padding: 10px;
 }
 
+/* El contenedor de filas se ajusta para ocupar el espacio disponible */
 .rows-container {
-  margin-top: 20px;
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 20px;
 }
 
 .fila {
   display: flex;
-  margin-bottom: 10px;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
+/* Los campos de entrada se distribuyen de manera uniforme */
 .input-field {
   flex: 1;
   padding: 10px;
@@ -68,6 +77,7 @@ h1 {
   border-color: #007BFF;
 }
 
+/* Botón de agregar fila */
 button {
   background-color: #28a745;
   color: white;
@@ -77,6 +87,7 @@ button {
   font-size: 1em;
   cursor: pointer;
   transition: background-color 0.3s;
+  align-self: center;
 }
 
 button:hover {
@@ -87,7 +98,23 @@ button:active {
   background-color: #1e7e34;
 }
 
+/* styles.css */
 
+/* Estilo para la columna de la letra */
+.letter-field {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: #ff5722;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+
+/* Ajustes responsivos para pantallas más pequeñas */
 @media (max-width: 768px) {
   .game-container {
     padding: 10px;
