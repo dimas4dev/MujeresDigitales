@@ -1,5 +1,11 @@
 
-const Fila = ({ columns, currentLetter }) => {
+const Fila = ({ columns, currentLetter, inputs, setInputs }) => {
+
+    const handleInputChange = (event) => {
+        const { name, value } = event.target;
+        setInputs({ ...inputs, [name]: value });
+    }
+
     return (
         <div className="fila">
             {columns.map((column, index) => (
@@ -14,6 +20,8 @@ const Fila = ({ columns, currentLetter }) => {
                         type="text"
                         placeholder={column.name}
                         className="input-field"
+                        onChange={handleInputChange}
+                        name={column.name}
                     />
                 )
             ))}

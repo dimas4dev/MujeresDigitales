@@ -1,5 +1,3 @@
-import './index.css'
-
 const Columna = ({ name }) => {
     return (
         <div className="columna">

@@ -7,6 +7,10 @@
   display: flex;
 }
 
+.columna {
+  flex: 1;
+  text-align: center;
+}
 
 .rows-container {
   margin-top: 20px;
