@@ -1,4 +1,6 @@
 .Layout {
     width: 90%;
     display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10px;
 }

@@ -1,8 +1,14 @@
-export const CardImage = () => {
+import './CardImage.css';
+
+export const CardImage = (props) => {
+
+    const { titleImage, descriptionImage, urlImage } = props;
+
     return (
-        <div className="CardImage">
-            <img className="CardImage-Img" src="https://via.placeholder.com/150" alt="imagen" />
-            <h2 className="CardImage-Title">Titulo de la imagen</h2>
-        </div>
+        <figure className="CardImage">
+            <img className="CardImage-Img" src={urlImage} alt="imagen" />
+            <figcaption className="CardImage-Title">{titleImage}</figcaption>
+            <p>{descriptionImage}</p>
+        </figure>
     )
 }
